@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
+    background: linear-gradient(135deg, #C5D3E8, #D0E8C5);
     color: #333;
     margin: 0;
     line-height: 1.6;
@@ -30,9 +30,8 @@ footer {
     margin-top: 20px;
 }
 
-/* Estilos Navegacion */
 nav, .navbar {
-    background: #444;
+    background: linear-gradient(135deg, #D0E8C5, #FFF8DE); /* Green to yellow gradient */
     padding: 10px;
     list-style: none;
     display: flex;
