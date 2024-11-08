@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #C5D3E8, #D0E8C5);
-    color: #333;
+    color: #B03052;
     margin: 0;
     line-height: 1.6;
 }
@@ -9,7 +9,7 @@ body {
 /* Header and Footer */
 header, footer {
     text-align: center;
-    background-color: #333;
+    background-color: #B03052;
     color: #fff;
     padding: 15px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -36,7 +36,7 @@ main:hover {
 
 /* Navigation Styling */
 nav, .navbar {
-    background: linear-gradient(135deg, #D0E8C5, #FFF8DE);
+    background: #CC2B52;
     padding: 10px;
     list-style: none;
     display: flex;
@@ -101,4 +101,53 @@ nav ul li, .navbar li {
     transform: scale(1.1) rotate(2deg); /* Scale and slight rotation */
     border-color: #C5D3E8; /* Adds a border color on hover */
     filter: brightness(1.1); /* Brightens the image on hover */
+}
+
+/* Add transition to header text */
+header h1 {
+    transition: transform 0.5s ease;
+}
+
+header h1:hover {
+    transform: scale(1.05);
+}
+
+/* Add media queries */
+@media (max-width: 768px) {
+    body {
+        font-size: 90%;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Decorative ::before pseudo-elements */
+header::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    margin-bottom: 10px;
+}
+
+footer::before {
+    display: block;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+header, footer {
+    animation: fadeIn 1s ease;
 }
